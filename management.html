@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="輔仁大學聖心學苑教學旅館，房型介紹、住宿預約與旅館資訊。">
+<title>後台管理｜聖心學苑教學旅館</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="retro.css">
+</head>
+<body data-page="management">
+<a class="skip-link" href="#content-start">跳到主要內容</a>
+<div class="demo-strip">輔仁大學餐旅管理學系 
+</div>
+<header class="site-header">
+<a class="brand" href="index.html">
+
+<span>聖心學苑<small>教學旅館 · FU JEN UNIVERSITY</small>
+</span>
+</a>
+<nav aria-label="主要導覽">
+<a href="index.html">旅館首頁</a>
+<a href="rooms.html">房型介紹</a>
+<a href="reservation.html">預約訂房</a>
+<a href="reports.html">營運報表</a>
+<a href="management.html" aria-current="page">後台管理</a>
+</nav>
+</header>
+<main id="content-start">
+<section class="page-heading">
+<p class="eyebrow">FRONT DESK</p>
+<h1>櫃檯管理</h1>
+<p>集中查看預約資料，與管理佈告欄的公告。</p>
+</section>
+
+<section id="admin-gate" class="admin-gate admin-login">
+<h2>管理者登入</h2>
+<p class="login-hint">測試帳號：aaaa ／ 密碼：123456</p>
+<form id="admin-login-form">
+<label for="admin-account">帳號</label>
+<input id="admin-account" name="account" autocomplete="username" required>
+<label for="admin-password">密碼</label>
+<input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+<p id="login-error" class="form-error" role="alert"></p>
+<button type="submit" class="button">登入 →</button>
+</form>
+</section>
+<div id="admin-workspace" hidden>
+<div class="admin-toolbar">
+<strong>目前角色：管理者</strong>
+<button id="exit-admin" class="plain-button">登出</button>
+</div>
+<section class="section">
+<div class="section-heading">
+<h2>訂房一覽表</h2>
+<label class="small">狀態 <select id="admin-filter">
+<option value="all">全部預約</option>
+<option value="active">有效預約</option>
+<option value="cancelled">已取消</option>
+</select>
+</label>
+</div>
+<div id="admin-bookings" class="table-scroll">
+</div>
+</section>
+<section class="section">
+<div class="section-heading">
+<h2>促銷與公告管理</h2>
+<button class="plain-button" id="add-notice">＋ 新增公告</button>
+</div>
+<div id="admin-notices">
+</div>
+</section>
+
+</div>
+</main>
+<dialog id="edit-dialog">
+<form id="edit-form">
+<div class="dialog-heading">
+<h2 id="edit-title">修改預約</h2>
+<button type="button" class="text-button close-dialog" aria-label="關閉">✕</button>
+</div>
+<input type="hidden" name="id">
+<label>聯絡人<input name="guest" required maxlength="30">
+</label>
+<label>聯絡電話<input name="phone" required pattern="[0-9+() -]{8,20}">
+</label>
+<label>房型<select name="room">
+</select>
+</label>
+<div class="field-pair">
+<label>入住日期<input type="date" name="checkin" required>
+</label>
+<label>退房日期<input type="date" name="checkout" required>
+</label>
+</div>
+<label>備註<textarea name="note" maxlength="200" rows="2">
+</textarea>
+</label>
+<p class="form-error" id="edit-error" role="alert">
+</p>
+<button class="button">儲存修改</button>
+</form>
+</dialog>
+<dialog id="notice-dialog">
+<form id="notice-form">
+<div class="dialog-heading">
+<h2 id="notice-title">新增公告</h2>
+<button type="button" class="text-button close-dialog" aria-label="關閉">✕</button>
+</div>
+<input type="hidden" name="id">
+<label>公告標題<input name="title" required maxlength="60">
+</label>
+<div class="field-pair">
+<label>日期<input type="date" name="date" required>
+</label>
+<label>分類<select name="category">
+<option>住宿提醒</option>
+<option>促銷方案</option>
+<option>旅館消息</option>
+</select>
+</label>
+</div>
+<label>公告內容<textarea name="content" required rows="5" maxlength="600">
+</textarea>
+</label>
+<button class="button">儲存公告</button>
+</form>
+</dialog>
+<footer>
+<div>
+<strong>聖心學苑教學旅館</strong>
+<p>新北市新莊區中正路 510 號 · 輔仁大學<br>訂房洽餐旅管理學系，校內分機 3597<br>服務時間 08:00–16:30</p>
+</div>
+<div class="footer-note">
+<a href="https://www.rhim.fju.edu.tw/tw/facility-introduction/sacred-teaching-hostel" target="_blank" rel="noreferrer">旅館資料與照片來源：輔大餐旅系 ↗</a>
+
+<a href="management.html">後台管理 →</a>
+</div>
+</footer>
+<div id="toast" role="status" aria-live="polite">
+</div>
+<script src="app.js">
+</script>
+</body>
+</html>

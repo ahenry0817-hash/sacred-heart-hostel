@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="輔仁大學聖心學苑教學旅館，房型介紹、住宿預約與旅館資訊。">
+<title>營運報表｜聖心學苑教學旅館</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="retro.css">
+</head>
+<body data-page="reports">
+<a class="skip-link" href="#content-start">跳到主要內容</a>
+<div class="demo-strip">輔仁大學餐旅管理學系 
+</div>
+<header class="site-header">
+<a class="brand" href="index.html">
+
+<span>聖心學苑<small>教學旅館 · FU JEN UNIVERSITY</small>
+</span>
+</a>
+<nav aria-label="主要導覽">
+<a href="index.html">旅館首頁</a>
+<a href="rooms.html">房型介紹</a>
+<a href="reservation.html">預約訂房</a>
+<a href="reports.html" aria-current="page">營運報表</a>
+<a href="management.html">後台管理</a>
+</nav>
+</header>
+<main id="content-start">
+<section class="page-heading">
+<p class="eyebrow">OPERATING REPORT</p>
+<h1>營運報表</h1>
+<p class="small muted">範例資料</p>
+<p>從月份與房型，查看教學旅館的營運狀況。</p>
+</section>
+
+<div class="report-toolbar">
+<label>查看年度 <select id="report-year">
+</select>
+</label>
+<button class="plain-button" id="download-report">下載年度 CSV</button>
+</div>
+<div id="report-stats" class="report-stats">
+</div>
+<section class="section">
+<div class="section-heading">
+<h2>各月入住與營收</h2>
+<span class="small muted">房晚：一間客房住一晚</span>
+</div>
+<div id="monthly-report" class="table-scroll">
+</div>
+</section>
+<section class="section">
+<div class="section-heading">
+<h2>各房型入住與營收</h2>
+<label class="small">月份 <select id="report-month">
+<option value="all">全年</option>
+</select>
+</label>
+</div>
+<div id="room-report" class="table-scroll">
+</div>
+<p class="small muted">入住率＝已使用房晚 ÷ 可供房晚。跨月住宿按每一晚所在月份計算，退房當天不計房晚。</p>
+</section>
+</main>
+<footer>
+<div>
+<strong>聖心學苑教學旅館</strong>
+<p>新北市新莊區中正路 510 號 · 輔仁大學<br>訂房洽餐旅管理學系，校內分機 3597<br>服務時間 08:00–16:30</p>
+</div>
+<div class="footer-note">
+<a href="https://www.rhim.fju.edu.tw/tw/facility-introduction/sacred-teaching-hostel" target="_blank" rel="noreferrer">旅館資料與照片來源：輔大餐旅系 ↗</a>
+
+<a href="management.html">後台管理 →</a>
+</div>
+</footer>
+<div id="toast" role="status" aria-live="polite">
+</div>
+<script src="app.js">
+</script>
+</body>
+</html>

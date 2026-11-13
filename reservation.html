@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="輔仁大學聖心學苑教學旅館，房型介紹、住宿預約與旅館資訊。">
+<title>預約訂房｜聖心學苑教學旅館</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="retro.css">
+</head>
+<body data-page="reservation">
+<a class="skip-link" href="#content-start">跳到主要內容</a>
+<div class="demo-strip">輔仁大學餐旅管理學系 
+</div>
+<header class="site-header">
+<a class="brand" href="index.html">
+
+<span>聖心學苑<small>教學旅館 · FU JEN UNIVERSITY</small>
+</span>
+</a>
+<nav aria-label="主要導覽">
+<a href="index.html">旅館首頁</a>
+<a href="rooms.html">房型介紹</a>
+<a href="reservation.html" aria-current="page">預約訂房</a>
+<a href="reports.html">營運報表</a>
+<a href="management.html">後台管理</a>
+</nav>
+</header>
+<main id="content-start">
+<section class="page-heading">
+<p class="eyebrow">RESERVATION</p>
+<h1>預約訂房</h1>
+<p>填寫住宿需求，也可以在下方查看與取消預約。</p>
+</section>
+
+<div class="booking-wizard">
+<aside class="booking-progress" aria-label="預約進度"><p class="eyebrow">YOUR CAMPUS VISIT</p><ol>
+<li data-progress="1" aria-current="step"><span>01</span><div>安排住宿<small>來訪身分、日期與房型</small></div></li>
+<li data-progress="2"><span>02</span><div>留下聯絡資料<small>姓名、電話與抵達備註</small></div></li>
+<li data-progress="3"><span>03</span><div>確認這次停留<small>核對資料，完成預約</small></div></li>
+</ol><p class="small muted">15:30 入住 · 12:00 退房<br>請至少提前三日預約。</p></aside>
+<div class="booking-pages"><form id="booking-form" novalidate>
+<section data-booking-step="1" aria-labelledby="booking-step-one"><p class="eyebrow">STEP 01 / STAY</p><h2 id="booking-step-one" tabindex="-1">先安排這次的校園停留</h2>
+<fieldset class="visit-options"><legend>您的來訪身分</legend>
+<label><input type="radio" name="identity" value="參與輔大活動者" checked><span>參與校園活動<small>研討會、講座或校內活動</small></span></label>
+<label><input type="radio" name="identity" value="校友"><span>校友返校<small>重訪熟悉的校園</small></span></label>
+<label><input type="radio" name="identity" value="系所邀請貴賓"><span>受邀來賓<small>應系所邀請來訪</small></span></label>
+</fieldset>
+<div class="field-pair"><label>入住日期<input type="date" name="checkin" required></label><label>退房日期<input type="date" name="checkout" required></label></div>
+<label>選擇房型<select name="room" required></select></label>
+</section>
+<section data-booking-step="2" hidden aria-labelledby="booking-step-two"><p class="eyebrow">STEP 02 / CONTACT</p><h2 id="booking-step-two" tabindex="-1">讓我們知道如何聯絡您</h2>
+<div class="field-pair"><label>聯絡人<input name="guest" placeholder="請輸入姓名" maxlength="30" required></label><label>聯絡電話<input name="phone" type="tel" placeholder="例如：0900-000-000" pattern="[0-9+() -]{8,20}" required></label></div>
+<label>備註 <span class="muted">（選填）</span><textarea name="note" rows="4" maxlength="200" placeholder="例如：預計抵達時間"></textarea></label>
+<p class="small muted">如有住宿安排需要協助，可以在備註中告訴我們。</p>
+</section>
+<section data-booking-step="3" hidden aria-labelledby="booking-step-three"><p class="eyebrow">STEP 03 / CONFIRM</p><h2 id="booking-step-three" tabindex="-1">確認您的住宿安排</h2><div id="booking-confirmation" class="booking-receipt"></div><p class="small muted">入住當天無法取消，如需協助請聯絡管理者。</p></section>
+<p id="booking-error" class="form-error" role="alert"></p>
+<div class="wizard-actions"><button id="booking-back" type="button" class="text-button" hidden>← 上一步</button><button id="booking-next" type="button" class="button">填寫聯絡資料 →</button><button id="booking-submit" type="submit" class="button" hidden>確認預約 →</button></div>
+</form>
+<div id="booking-result" class="result-box" hidden role="status"></div>
+<button id="booking-restart" type="button" class="plain-button" hidden>再新增一筆預約</button>
+</div>
+<div class="booking-bottom-summary" aria-label="住宿摘要"><div><span>本次來訪</span><strong id="summary-identity">參與輔大活動者</strong></div><div><span>房型</span><strong id="summary-room">—</strong></div><div><span id="summary-dates">住宿晚數</span><strong id="summary-nights">—</strong></div><div><span>每晚 <span id="summary-price">—</span></span><strong id="summary-total">—</strong></div><p>房費依牌價估算，實際費用以旅館確認為準。</p></div>
+</div>
+<section class="section">
+<div class="section-heading">
+<div>
+<p class="eyebrow">MY RESERVATIONS</p>
+<h2>我的預約</h2>
+</div>
+
+</div>
+<div id="my-bookings">
+</div>
+</section>
+</main>
+<footer>
+<div>
+<strong>聖心學苑教學旅館</strong>
+<p>新北市新莊區中正路 510 號 · 輔仁大學<br>訂房洽餐旅管理學系，校內分機 3597<br>服務時間 08:00–16:30</p>
+</div>
+<div class="footer-note">
+<a href="https://www.rhim.fju.edu.tw/tw/facility-introduction/sacred-teaching-hostel" target="_blank" rel="noreferrer">旅館資料與照片來源：輔大餐旅系 ↗</a>
+
+<a href="management.html">後台管理 →</a>
+</div>
+</footer>
+<div id="toast" role="status" aria-live="polite">
+</div>
+<script src="app.js">
+</script>
+</body>
+</html>
